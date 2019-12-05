@@ -8,10 +8,8 @@ Fetch Producthunt latest goodies!
 [![License](https://img.shields.io/npm/l/fph.svg)](https://github.com/rafalolszewski94/fph/blob/master/package.json)
 
 # Usage
-<!-- usage -->
 ```sh-session
-$ npm install -g fph
-$ fph
+npm install -g fph
+fph
 ...
 ```
-<!-- usagestop -->
