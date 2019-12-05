@@ -1,7 +1,7 @@
 {
   "name": "fph",
   "description": "Fetch Product Hunt latest goodies!",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "author": "Rafał Olszewski @rafalolszewski94",
   "bin": {
     "fph": "./bin/run"
