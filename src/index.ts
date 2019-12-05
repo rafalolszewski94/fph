@@ -14,12 +14,10 @@ class FPH extends Command {
   }
 
   async run() {
-    cli.action.start('Fetching latest trends from Product Hunt...', '', {stdout: true})
-
     const {flags} = this.parse(FPH)
 
     await rp(url).then((html: any) => {
-      cli.action.stop(chalk.bold.green('done ✔'))
+      cli.action.start('Fetching latest trends from Product Hunt...', '', {stdout: true})
       const posts: any[] = []
       const $ = cheerio.load(html)
       const postsList = $('#app ul[class*=postsList] > li')
@@ -44,6 +42,8 @@ class FPH extends Command {
         printLine: this.log,
         ...flags,
       })
+    }).then(() => {
+      cli.action.stop(chalk.bold.green('done ✔'))
     }).catch((error: string | Error) =>
       this.error(error))
   }
